@@ -1,0 +1,69 @@
+body{
+    background: linear-gradient(to bottom, #020000, #002fff);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+h1{
+    color:rgb(255, 255, 255);
+    text-align: center;
+}
+
+button{
+    align-items: center;
+    border-radius: 12px;
+    border-color:orangered;
+    background-color: red;
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+.cartas {
+  display: flex;
+  justify-content: center; /* Espacio igual entre imágenes */
+  align-content: center;
+  align-items: center;
+  /* Permite que las imágenes se envuelvan a la siguiente línea si es necesario */
+  gap: 1rem;
+  margin: 0;
+  position : relative;
+  transform-style: preserve-3d;
+  transition: transform .5s;
+}
+.tablero {
+  display: flex;
+  justify-content: center; /* Centra las cartas horizontalmente */
+  align-items: center; /* Centra las cartas verticalmente */
+  flex-wrap: wrap; /* Permite que las cartas se envuelvan a la siguiente línea si es necesario */
+  gap: 25rem; /* Espacio entre las cartas */
+  padding: 20px; /* Espacio alrededor del tablero */
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente para el tablero */
+  border-radius: 10px; /* Bordes redondeados para el tablero */
+  width: 1500px; /* Ancho del tablero */
+  height: 850px; /* Altura del tablero */
+  margin: auto; /* Centra el tablero en la página */
+  perspective: 1000px;
+}
+.frente{
+  position: absolute;
+  transform: rotateY(180deg);
+}
+.atras{
+  position : absolute;
+  backface-visibility: hidden;
+}
+img {
+  width: 200px;
+  height: 250px;
+}
+.cartas:hover{
+  transform: scale(1.1);
+}
+
+.cartas.voltear {
+  transform: rotateY(180deg);
+}
+
+
+
